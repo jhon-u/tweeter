@@ -1,7 +1,7 @@
 nav {
   display: flex;
   height: 120px;
-  background-color: #1a659e;
+  background-color: var(--primary-color);
   color: #fff;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@ nav {
 }
 
 .logo {
-  font-family: 'Bungee';
+  font-family: var(--secondary-font);
   margin-left: 1.5em;
 }
 
@@ -26,5 +26,5 @@ i {
 }
 
 .fa-angles-down {
-  color: red;
+  color: var(--icons-color);
 }

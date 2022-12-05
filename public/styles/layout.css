@@ -19,14 +19,26 @@ html {
   font: inherit;
 }
 
+:root {
+  --primary-font: 'Source Sans Pro';
+  --secondary-font: 'Bungee';
+  --primary-font-color: #545149;
+  --primary-color: #004e89;
+  --primary-bg-color: #efefd0;
+  --secondary-bg-color: #f4f1ec;
+  --secondary-color: #ff6b35;
+  --component-bg-color: #f7c59f;
+  --icons-color: #ff6b35;
+}
+
 /*
  * Global layout stuff
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--primary-font-color);
+  background-color: var(--secondary-bg-color);
+  font-family: var(--primary-font, sans-serif);
   font-size: 24px;
 }
 

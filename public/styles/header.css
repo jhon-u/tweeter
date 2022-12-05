@@ -7,6 +7,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #efefd0;
+  background-color: var(--primary-bg-color);
   background-image: url("../images/header-bg.png");
 }
