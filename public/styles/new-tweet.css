@@ -1,0 +1,24 @@
+.new-tweet {
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  position: relative;
+  top: 10px;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-item {
+  background-color: ;
+}
