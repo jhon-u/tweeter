@@ -12,6 +12,7 @@ nav {
 .logo {
   font-family: var(--secondary-font);
   margin-left: 1.5em;
+  font-size: 24px;
 }
 
 .nav-right {

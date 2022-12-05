@@ -10,7 +10,9 @@ form {
 
 .form-label {
   position: relative;
-  top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  /* top: 10px; */
 }
 
 .form-bottom {
@@ -19,7 +21,28 @@ form {
   margin-top: 10px;
 }
 
+textarea {
+  border: 3px solid var(--primary-font-color);
+  border-style: none none solid;
+  background-color: var(--secondary-bg-color);
+  padding: 10px 0;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 .btn-item {
   background-color: var(--secondary-color);
-  font
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.counter {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  color: var(--primary-font-color)
 }

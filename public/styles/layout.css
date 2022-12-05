@@ -39,7 +39,7 @@ body {
   color: var(--primary-font-color);
   background-color: var(--secondary-bg-color);
   font-family: var(--primary-font, sans-serif);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 main {
