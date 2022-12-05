@@ -10,3 +10,7 @@ header {
   background-color: var(--primary-bg-color);
   background-image: url("../images/header-bg.png");
 }
+
+.user-name {
+  font-weight: bold;
+}
