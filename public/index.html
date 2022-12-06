@@ -16,8 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
     rel="stylesheet">
 
   <!-- App CSS -->
@@ -25,6 +27,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,7 +49,7 @@
   </nav>
 
   <!-- Header for avatar and user name -->
-  <header>
+  <header class="main-header">
     <div class="avatar">
       <img src="/images/storm-trooper.png">
     </div>
@@ -59,7 +62,6 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <!-- <h2>Compose Tweet</h2> -->
       <form action="/tweets/" method="POST">
         <label class="form-label" for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -69,6 +71,36 @@
         </div>
       </form>
     </section>
+    <article class="tweet">
+      <header>
+        <div class="left-box">
+          <img src="/images/avatar-man.png">
+          <div class="tweet-name">
+            Joe Smith
+          </div>
+        </div>
+        <div class="handle">
+          @username
+        </div>
+      </header>
+      <main>
+        <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum
+          sodales. Nullam mattis
+          fermentum libero, non volutpat.
+        </div>
+        <div class="tweet-divider"></div>
+      </main>
+      <footer>
+        <div>
+          10 days ago
+        </div>
+        <div class="tweet-options">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>
   </main>
 </body>
 
