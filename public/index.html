@@ -33,8 +33,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script defer type="text/javascript" src="/scripts/client.js"></script>
+  <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -71,36 +71,8 @@
         </div>
       </form>
     </section>
-    <article class="tweet">
-      <header>
-        <div class="left-box">
-          <img src="/images/avatar-man.png">
-          <div class="tweet-name">
-            Joe Smith
-          </div>
-        </div>
-        <div class="handle">
-          @username
-        </div>
-      </header>
-      <main>
-        <div class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum
-          sodales. Nullam mattis
-          fermentum libero, non volutpat.
-        </div>
-        <div class="tweet-divider"></div>
-      </main>
-      <footer>
-        <div>
-          10 days ago
-        </div>
-        <div class="tweet-options">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-      </footer>
-    </article>
+    <section class="tweets-container" id="tweets-container">
+    </section>
   </main>
 </body>
 
