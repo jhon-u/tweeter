@@ -1,5 +1,5 @@
 .new-tweet {
-  margin: 10px 0 10px 0;
+  margin: 2em 0;
   width: 100%;
 }
 
@@ -18,14 +18,14 @@ form {
 .form-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 0.8em;
 }
 
 textarea {
   border: 3px solid var(--primary-font-color);
   border-style: none none solid;
   background-color: var(--secondary-bg-color);
-  padding: 10px 0;
+  padding: 0.5em 0;
 }
 
 textarea:focus {
@@ -36,9 +36,18 @@ textarea:focus {
   background-color: var(--secondary-color);
   font-family: var(--secondary-font);
   font-size: 20px;
-  border: none;
-  padding: 5px 10px;
+  border: 1px solid;
+  padding: 0.5em 1em;
   color: #fff;
+}
+
+.btn-item:hover {
+  cursor: pointer;
+}
+
+.btn-item:active {
+  border: 1px solid;
+  box-shadow: var(--secondary-color) 0 0 3px 2px;
 }
 
 .counter {
