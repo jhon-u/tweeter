@@ -1,4 +1,4 @@
-$(document).ready(function(e) {
+$("document").ready(function() {
   let maxLength = 140;
   $("textarea").on("keyup", function() {
     let tweetLength = maxLength - $(this).val().length;
