@@ -62,11 +62,18 @@ $("document").ready(function() {
 
   $("#form").submit(function(event) {
     event.preventDefault();
-    console.log(event);
     const text = $("#tweet-text").val();
 
+    console.log("TEXT", text);
+
+    if (!text.trim()) {
+      alert("No text to display");
+      return;
+    }
+
     if (text.length > 140) {
-      console.log("textLength is too long!");
+      alert("textLength is too long!");
+      return;
     }
 
     $.ajax({
