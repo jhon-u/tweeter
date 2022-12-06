@@ -83,6 +83,41 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-// $("#tweets-container").ready(renderTweets(data));
+// Add comments here
+$("document").ready(function() {
+  
+  // const $button = $(".btn-item");
+  // $button.on("submit", function() {
+    
+  //   console.log("Button clicked, performing ajax call...");
+    
+  //   $.ajax("more-posts.html", { method: "GET" })
+  //     .then(function(morePostsHtml) {
+  //       console.log("Success: ", morePostsHtml);
+  //       $button.replaceWith(morePostsHtml);
+  //     });
+  // });
+  // Using validation to check for the presence of an input
+  $("#form").submit(function(event) {
+    event.preventDefault();
+    const text = $("#tweet-text").val();
 
-renderTweets(data);
+    if (text.length > 140) {
+
+      alert("textLength is too long!");
+      // event.preventDefault();
+    }
+    
+    $.ajax({
+      url: "/tweets/",
+      type: "post",
+      data: $("#form").serialize(),
+      success: function(data) {
+        // ... do something with the data...
+        console.log(data);
+      }
+    });
+  });
+});
+
+renderTweets(data);a
