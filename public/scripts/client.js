@@ -4,32 +4,32 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
-$(document).ready(function() {
+$("document").ready(function() {
 
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -41,7 +41,6 @@ $(document).ready(function() {
         text: tweets[index].content.text,
         createdAt: tweets[index].created_at
       };
-      console.log(tweet);
       // calls createTweetElement for each tweet
       const tweetElement = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
@@ -85,44 +84,33 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  renderTweets(data);
-});
-
-// Add comments here
-$("document").ready(function() {
-  
-  // const $button = $(".btn-item");
-  // $button.on("submit", function() {
-    
-  //   console.log("Button clicked, performing ajax call...");
-    
-  //   $.ajax("more-posts.html", { method: "GET" })
-  //     .then(function(morePostsHtml) {
-  //       console.log("Success: ", morePostsHtml);
-  //       $button.replaceWith(morePostsHtml);
-  //     });
-  // });
-  // Using validation to check for the presence of an input
   $("#form").submit(function(event) {
     event.preventDefault();
+    console.log(event);
     const text = $("#tweet-text").val();
 
     if (text.length > 140) {
-
-      alert("textLength is too long!");
-      // event.preventDefault();
+      console.log("textLength is too long!");
     }
-    
+
     $.ajax({
       url: "/tweets/",
-      type: "post",
+      method: "post",
       data: $("#form").serialize(),
-      success: function(data) {
-        // ... do something with the data...
-        console.log(data);
-      }
     });
+    
+    
   });
+
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: "GET" })
+      .then(function(data) {
+        console.log("Success: ", data);
+        renderTweets(data);
+      });
+  };
+
+  loadTweets("../server/data-files/initial-tweets.json");
+
 });
 
-// renderTweets(data);
