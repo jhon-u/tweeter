@@ -7,15 +7,16 @@
 $("document").ready(function() {
 
   const renderTweets = function(tweets) {
-    
+    console.log(tweets);
+    const sortedData = tweets.sort((a, b) => b.created_at - a.created_at);
     // loops through tweets
-    for (const index in tweets) {
+    for (const index in sortedData) {
       const tweet = {
-        username: tweets[index].user.name,
-        avatar: tweets[index].user.avatars,
-        handle: tweets[index].user.handle,
-        text: tweets[index].content.text,
-        createdAt: timeago.format(tweets[index].created_at)
+        username: sortedData[index].user.name,
+        avatar: sortedData[index].user.avatars,
+        handle: sortedData[index].user.handle,
+        text: sortedData[index].content.text,
+        createdAt: timeago.format(sortedData[index].created_at)
       };
       // calls createTweetElement for each tweet
       const tweetElement = createTweetElement(tweet);
@@ -64,8 +65,6 @@ $("document").ready(function() {
     event.preventDefault();
     const text = $("#tweet-text").val();
 
-    console.log("TEXT", text);
-
     if (!text.trim()) {
       alert("No text to display");
       return;
@@ -77,23 +76,25 @@ $("document").ready(function() {
     }
 
     $.ajax({
-      url: "/tweets/",
-      method: "post",
+      url: "/tweets",
+      type: "post",
       data: $("#form").serialize(),
-    });
-    
-    
+    })
+      .done(function() {
+        $("#tweet-text").val("");
+        loadTweets();
+      });
   });
-
+    
   const loadTweets = function() {
     $.ajax("/tweets", { method: "GET" })
       .then(function(data) {
-        console.log("Success: ", data);
+        $("#tweets-container").empty();
         renderTweets(data);
       });
   };
 
-  loadTweets("../server/data-files/initial-tweets.json");
+  loadTweets();
 
 });
 
