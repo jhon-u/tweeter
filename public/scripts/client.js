@@ -97,7 +97,9 @@ $("document").ready(function() {
   });
 
   $(".new-tweet-link").click(function(e) {
-    $(".new-tweet").slideToggle();
+    $(".new-tweet").slideToggle("slow", function() {
+      $("#tweet-text").focus();
+    });
   });
     
   const loadTweets = function() {
