@@ -65,10 +65,15 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+
+      <div class="form-msg-box">
+        <i class="fa-solid fa-bomb"></i>
+        <span class="error-msg">This is an error. Please style me! This is an error. Please style me!</span>
+      </div>
       <form id="form" action="/tweets/" method="POST">
         <label class="form-label" for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div class="form-bottom">
+        <div class="form-footer">
           <button class="btn-item" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
