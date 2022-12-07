@@ -18,11 +18,6 @@ form {
   text-align: center;
 }
 
-/* .error-msg {
-  color: #b71c1c;
-  background-color: #FFCCBC;
-} */
-
 .form-msg i {
   padding: 0 1em;
 }
@@ -31,7 +26,6 @@ form {
   position: relative;
   font-size: 20px;
   font-weight: bold;
-  /* top: 10px; */
 }
 
 textarea {
@@ -51,7 +45,6 @@ textarea:focus {
   justify-content: space-between;
   margin-top: 0.8em;
 }
-
 
 .btn-item {
   background-color: var(--secondary-color);

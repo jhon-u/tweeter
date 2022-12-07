@@ -9,6 +9,7 @@
   flex-direction: column;
   background-color: var(--primary-bg-color);
   background-image: url("../images/header-bg.png");
+  margin-bottom: 2em;
 }
 
 .user-name {
