@@ -1,5 +1,5 @@
 .new-tweet {
-  margin: 2em 0;
+  margin: 1em 0 3em;
   width: 100%;
 }
 
@@ -39,6 +39,7 @@ textarea {
   border-style: none none solid;
   background-color: var(--secondary-bg-color);
   padding: 0.5em 0 0;
+  resize: none;
 }
 
 textarea:focus {
