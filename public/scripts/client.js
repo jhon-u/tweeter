@@ -41,7 +41,7 @@ $("document").ready(function() {
     </header>
     <main>
     <div class="tweet-text">
-    ${tweet.text}
+    ${$("<div>").text(tweet.text)}
     </div>
     <div class="tweet-divider"></div>
     </main>
@@ -64,7 +64,7 @@ $("document").ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
     const text = $("#tweet-text").val();
-
+    
     if (!text.trim()) {
       alert("No text to display");
       return;
@@ -74,6 +74,8 @@ $("document").ready(function() {
       alert("textLength is too long!");
       return;
     }
+
+    console.log("SERIALIZED: ", $("<div>").text($("#form").serialize()));
 
     $.ajax({
       url: "/tweets",
