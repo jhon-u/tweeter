@@ -29,4 +29,12 @@ i {
 
 .fa-angles-down {
   color: var(--icons-color);
+  margin-top: 0.3em;
+  -webkit-animation: bounce .6s ease infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    transform: translateY(-5px);
+  }
 }
