@@ -61,12 +61,17 @@ $("document").ready(function() {
     return $tweet;
   };
 
+  $("#form").on("keydown", function() {
+    $(".form-msg-box").fadeOut();
+  });
+
   $("#form").submit(function(event) {
     event.preventDefault();
     const text = $("#tweet-text").val();
     
     if (!text.trim()) {
-      alert("No text to display");
+      $(".form-msg-box").fadeIn();
+      $(".error-msg").text("A blank tweet? Let's try that again by adding some text.");
       return;
     }
 
@@ -74,6 +79,8 @@ $("document").ready(function() {
       alert("textLength is too long!");
       return;
     }
+    
+    // $(".form-msg").removeClass("error");
 
     console.log("SERIALIZED: ", $("<div>").text($("#form").serialize()));
 
