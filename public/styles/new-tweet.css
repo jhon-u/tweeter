@@ -8,17 +8,30 @@ form {
   flex-direction: column;
 }
 
+.form-msg-box {
+  display: none;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  color: #b71c1c;
+  background-color: #FFCCBC;
+  text-align: center;
+}
+
+/* .error-msg {
+  color: #b71c1c;
+  background-color: #FFCCBC;
+} */
+
+.form-msg i {
+  padding: 0 1em;
+}
+
 .form-label {
   position: relative;
   font-size: 20px;
   font-weight: bold;
   /* top: 10px; */
-}
-
-.form-bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8em;
 }
 
 textarea {
@@ -31,6 +44,13 @@ textarea {
 textarea:focus {
   outline: none;
 }
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8em;
+}
+
 
 .btn-item {
   background-color: var(--secondary-color);
