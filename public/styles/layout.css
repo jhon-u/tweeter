@@ -26,9 +26,10 @@ html {
   --primary-color: #004e89;
   --primary-bg-color: #efefd0;
   --secondary-bg-color: #f4f1ec;
-  --secondary-color: #ff6b35;
+  --secondary-color: rgb(255, 107, 53);
   --component-bg-color: #f7c59f;
   --icons-color: #ff6b35;
+  --primary-box-shadow: 0 0 5px 4px rgb(255 107 53 / 60%);
 }
 
 /*
@@ -46,8 +47,6 @@ main.container {
   display: flex;
   flex-direction: column;
   position: relative;
-  display: flex;
   width: 90%;
   margin: auto;
-  /* top: 120px; */
 }

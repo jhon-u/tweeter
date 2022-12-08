@@ -1,19 +1,32 @@
 .composer {
   cursor: pointer;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.composer:focus {
+  outline: none;
+  transform: scale(1.04);
 }
 
 .back-to-top {
-  margin-top: 4em;
-  position: relative;
+  position: fixed;
+  bottom: 1em;
+  right: 1.5em;
+  border: none;
+  border-radius: 50%;
 }
 
 .back-to-top i {
-  position: fixed;
   cursor: pointer;
   color: var(--icons-color);
   font-size: 60px;
-  bottom: 20px;
-  right: 20px;
   background-color: white;
   border-radius: 50%;
+}
+
+.back-to-top:focus {
+  outline: none;
+  box-shadow: var(--primary-box-shadow);
 }
