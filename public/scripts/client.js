@@ -9,7 +9,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     // Sorts the tweets by create date ascending.
     const sortedData = tweets.sort((a, b) => b.created_at - a.created_at);
-    $("#tweets-container").empty();
+    $("#tweets-container").empty().show("slow");
 
     
     // loops through tweets
