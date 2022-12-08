@@ -49,5 +49,5 @@ main.container {
   display: flex;
   width: 90%;
   margin: auto;
-  top: 120px;
+  /* top: 120px; */
 }
