@@ -60,13 +60,12 @@ textarea:focus {
 }
 
 .btn-item:active {
-  border: 1px solid;
-  box-shadow: var(--secondary-color) 0 0 3px 2px;
+  outline: none;
+  box-shadow: var(--primary-box-shadow);
 }
 
 .btn-item:focus {
   outline: none;
-  box-shadow: var(--primary-box-shadow);
 }
 
 .counter {
