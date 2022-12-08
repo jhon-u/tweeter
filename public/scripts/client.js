@@ -98,6 +98,7 @@ $(document).ready(function() {
     })
       .done(function() {
         $("#tweet-text").val("");
+        $(".counter").text("140");
         loadTweets();
       });
   });
