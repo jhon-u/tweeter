@@ -20,7 +20,7 @@
 
 .back-to-top i {
   cursor: pointer;
-  color: var(--icons-color);
+  color: var(--secondary-color);
   font-size: 60px;
   background-color: white;
   border-radius: 50%;

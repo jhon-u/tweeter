@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-right i {
-  color: var(--icons-color);
+  color: var(--secondary-color);
   margin-top: 0.3em;
   animation: bounce .6s ease infinite alternate;
 }

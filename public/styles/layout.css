@@ -23,12 +23,11 @@ html {
   --primary-font: 'Source Sans Pro';
   --secondary-font: 'Bungee';
   --primary-font-color: #545149;
-  --primary-color: #004e89;
-  --primary-bg-color: #efefd0;
-  --secondary-bg-color: #f4f1ec;
+  --secondary-font-color: #ffffff;
+  --primary-color: #001524;
   --secondary-color: rgb(255, 107, 53);
-  --component-bg-color: #f7c59f;
-  --icons-color: #ff6b35;
+  --primary-bg-color: #001524;
+  --secondary-bg-color: #f4f1ec;
   --primary-box-shadow: 0 0 5px 4px rgb(255 107 53 / 60%);
 }
 

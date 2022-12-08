@@ -27,7 +27,6 @@ header .left-box {
 
 .tweet-name {
   margin-left: 0.5em;
-
 }
 
 .handle {
@@ -58,7 +57,7 @@ article.tweet footer {
 }
 
 .tweet-options i {
-  color: var(--icons-color);
+  color: var(--secondary-color);
   margin: 0.5em 0.5em 1.3em;
 }
 
