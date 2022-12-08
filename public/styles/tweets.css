@@ -32,6 +32,7 @@ header .left-box {
 
 .tweet-text {
   padding: 1em 0.5em;
+  overflow-wrap: break-word;
 }
 
 .tweet-divider {
