@@ -1,0 +1,19 @@
+.composer {
+  cursor: pointer;
+}
+
+.back-to-top {
+  margin-top: 4em;
+  position: relative;
+}
+
+.back-to-top i {
+  position: fixed;
+  cursor: pointer;
+  color: var(--icons-color);
+  font-size: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
