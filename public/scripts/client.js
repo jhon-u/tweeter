@@ -1,18 +1,8 @@
-/*
-* Client-side JS logic goes here
-* jQuery is already loaded
-* Reminder: Use (and do all your DOM work in) jQuery's document ready function
-*/
-
 $(document).ready(function() {
-
   const renderTweets = function(tweets) {
-    // Sorts the tweets by create date ascending.
     const sortedData = tweets.sort((a, b) => b.created_at - a.created_at);
     $("#tweets-container").empty().show("slow");
 
-    
-    // loops through tweets
     for (const index in sortedData) {
       const username = sortedData[index].user.name;
       const avatar = sortedData[index].user.avatars;
@@ -27,9 +17,8 @@ $(document).ready(function() {
         text,
         createdAt
       };
-      // calls createTweetElement for each tweet
+
       const tweetElement = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
       $("#tweets-container").append(tweetElement);
     }
   };
@@ -66,8 +55,7 @@ $(document).ready(function() {
         </div>
       </footer>
     </article>
-          `;/* Your code for creating the tweet element */
-    // ...
+          `;
     return $tweet;
   };
 
