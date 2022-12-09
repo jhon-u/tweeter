@@ -12,12 +12,13 @@
   header.main-header {
     top: 120px;
     margin: 3em 2em 0;
+    width: 40%;
   }
 
   main.container {
     top: 120px;
     margin: 3em;
-    width: 50%;
+    width: 60%;
   }
 
 
