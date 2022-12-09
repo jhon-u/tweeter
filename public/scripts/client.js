@@ -1,3 +1,8 @@
+/**
+ * Fetches tweets from the server using jQuery and AJAX.
+ * Loads and render the tweets into the page.
+ */
+
 $(document).ready(function() {
   const renderTweets = function(tweets) {
     const sortedData = tweets.sort((a, b) => b.created_at - a.created_at);
